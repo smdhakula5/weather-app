@@ -1,0 +1,71 @@
+/* styles.css */
+.sunny-weather {
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: sunRay 3s ease-in-out infinite;
+}
+
+@keyframes sunRay {
+  0%, 100% {
+    box-shadow: 0 0 10px 2px yellow;
+  }
+  50% {
+    box-shadow: 0 0 50px 5px yellow;
+  }
+}
+
+/* styles.css */
+.rainy-weather {
+  width: 200px;
+  height: 150px;
+  background-color: #cce0ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cloud {
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.raindrop {
+  width: 10px;
+  height: 30px;
+  background-color: #0055cc;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: rainDropFall 0.5s linear infinite;
+}
+
+@keyframes rainDropFall {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(120px);
+  }
+}
