@@ -7,7 +7,7 @@ import rain from './assets/rain.json';
 import snowing from './assets/snowing.json';
 import thunderstorm from './assets/thunder-storm.json';
 import fogmist from './assets/fog-mist.json';
-import backgroundImage from './assets/bg.jpeg'; // Path to your background image
+import backgroundImage from './assets/bg.jpeg';
 
 const WelcomePage = ({ onSubmit, showWelcome }) => {
   const [location, setLocation] = useState('');
@@ -79,7 +79,7 @@ function App() {
       console.log(data);
       setWeatherData(data);
       setLoading(false);
-      setShowWelcome(false); // Hide the welcome message after fetching weather data
+      setShowWelcome(false);
     } catch (error) {
       console.error('Error fetching weather data:', error);
       setLoading(false);
